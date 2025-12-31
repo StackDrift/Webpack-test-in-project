@@ -98,6 +98,10 @@ header {
   position: relative;
 }
 
+.mobile_menu {
+  display: none;
+}
+
 .nav-list {
   display: flex;
   padding: 26px 0;
@@ -280,6 +284,10 @@ span {
 
 footer {
   background-color: #09010D;
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+
 }
 
 .footer-wrapper, .wrapper_container, .main-screen-about {
@@ -306,7 +314,8 @@ footer {
 
 .input-group {
   position: relative;
-  width: 410px;
+  width: 100%;
+  max-width: 410px;
   margin: 20px auto 0;
 
   &::before {
@@ -414,8 +423,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 50px 0 0;
   padding-bottom: 25px;
+  flex-wrap: wrap;
 }
 
 #modal {
@@ -481,9 +490,14 @@ a {
 }
 
 @media (width <= 1165px) {
-  .footer-wrapper {
+  .footer-wrapper, .wrapper_container {
     padding: 0 20px;
   }
+
+  .main-screen-container {
+    margin: 0 20px;
+  }
+ 
 
   .user-icon {
     right: 20px;
@@ -503,6 +517,7 @@ a {
   max-width: 1440px;
   margin: auto;
   position: relative;
+  overflow-x: hidden;
 
   &::before {
     content: '';
@@ -593,6 +608,7 @@ a {
   max-width: 367px;
   width: 100%;
   position: relative;
+  overflow: hidden;
 
   .img--planet {
     width: 100%;
@@ -617,4 +633,47 @@ a {
   line-height: 1.4;
   text-align: justify;
   padding: 32px 47px 32px 32px;
+}
+
+@media (width <= 480px) and (hover: none) {
+  .block-about, .block-legalese, .block-mobile-app, .block-connect {
+    border: 1px solid white;
+    padding: 10px;
+    margin: auto;
+    border-radius: 6px;
+  }
+
+  .footer-menu {
+    > div + div {
+      margin-top: 25px;
+    }
+  }
+
+  .footer-other {
+    justify-content: center;
+
+    p {
+      margin: 25px 0;
+    }
+  }
+
+  .container-in-header {
+    height: 68px;
+
+    > a {
+      display: none;
+    }
+  }
+
+  .main-screen {
+    padding: 0 10px;
+  }
+}
+
+/* styles for thanks message */
+#message {
+  display: none;
+  margin-top: 20px;
+  color: green;
+  font-weight: bold;
 }
