@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* connecting fonts */
 @font-face {
   font-family: "SF Pro Text";
@@ -6,7 +7,6 @@
   font-display: swap;
   font-style: normal;
 }
-
 @font-face {
   font-family: "SF Pro Text";
   src: url("/fonts/SF-Pro-Text-Regular.woff2") format("woff2");
@@ -14,7 +14,6 @@
   font-display: swap;
   font-style: normal;
 }
-
 @font-face {
   font-family: "SF Pro Text";
   src: url("/fonts/SF-Pro-Text-Semibold.woff2") format("woff2");
@@ -22,7 +21,6 @@
   font-display: swap;
   font-style: normal;
 }
-
 /* reset styles */
 *,
 *::before,
@@ -54,7 +52,7 @@ body {
   margin: 0;
   font-family: "SF Pro Text", sans-serif;
   color: white;
-  background-color: rgb(19 19 19);
+  background-color: rgb(19, 19, 19);
   position: relative;
 }
 
@@ -73,9 +71,8 @@ body {
 header {
   padding-top: 36px;
   position: relative;
-  border-bottom: 1px solid rgb(255 255 255 / 20%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-
 header::before {
   content: "";
   position: absolute;
@@ -83,7 +80,7 @@ header::before {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: rgb(255 255 255 / 20%);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .container-in-header {
@@ -105,7 +102,6 @@ header::before {
   margin: 0;
   text-transform: uppercase;
 }
-
 .nav-list li + li {
   margin-left: 50px;
 }
@@ -120,7 +116,6 @@ header::before {
 .menu-item:hover {
   color: #5B00FB;
 }
-
 .menu-item:hover::before {
   content: "";
   position: absolute;
@@ -159,17 +154,15 @@ h1::after {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   white-space: nowrap;
 }
-
 .main-screen-button:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgb(93 0 250 / 40%);
+  box-shadow: 0 12px 30px rgba(93, 0, 250, 0.4);
 }
 
 .main-screen {
   text-align: center;
   margin-top: 129px;
 }
-
 .main-screen p {
   margin: 12px 0 40px;
 }
@@ -199,16 +192,15 @@ h2 {
 }
 
 .card-songer {
-  background: radial-gradient(circle, rgb(187 130 219) 0%, rgb(99 109 193) 35%, rgb(29 15 53) 100%);
+  background: radial-gradient(circle, rgb(187, 130, 219) 0%, rgb(99, 109, 193) 35%, rgb(29, 15, 53) 100%);
   width: 255px;
   border-radius: 6px;
 }
-
 .card-songer img {
   border-radius: 6px;
   margin: auto;
   margin-top: 20px;
-  box-shadow: 7px 4px 12px 0 rgb(0 0 0 / 20%);
+  box-shadow: 7px 4px 12px 0 rgba(0, 0, 0, 0.2);
 }
 
 h3 {
@@ -233,10 +225,9 @@ span {
   white-space: nowrap;
   margin: 16px 0 20px;
 }
-
 .btn-in-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgb(93 0 250 / 40%);
+  box-shadow: 0 12px 30px rgba(93, 0, 250, 0.4);
 }
 
 /* Latest NFTs screen */
@@ -254,7 +245,6 @@ span {
   color: #FFF;
   padding: 8px 16px;
 }
-
 .button-category:hover {
   background-image: linear-gradient(90deg, #7000ff, #e800d0);
   cursor: pointer;
@@ -294,7 +284,6 @@ footer {
   margin: 0 0 60px;
   padding-top: 50px;
 }
-
 .footer-subscribe-part input {
   width: 100%;
   max-width: 410px;
@@ -311,7 +300,6 @@ footer {
   max-width: 410px;
   margin: 20px auto 0;
 }
-
 .input-group::before {
   content: "";
   display: block;
@@ -390,7 +378,6 @@ a {
   position: relative;
   padding-left: 15px;
 }
-
 .block-about li::before, .block-legalese li::before {
   content: "";
   left: 0;
@@ -402,7 +389,6 @@ a {
   border-color: transparent transparent transparent #fff;
   position: absolute;
 }
-
 .block-about li + li, .block-legalese li + li {
   margin-top: 10px;
 }
@@ -420,7 +406,7 @@ a {
   position: relative;
   position: fixed;
   inset: 0;
-  background-color: rgb(0 0 0 / 90%);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal-body {
@@ -440,15 +426,14 @@ a {
 
 #close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 0.3em;
+  right: 0.3em;
   overflow: hidden;
   font-size: 2em;
   height: 1em;
   width: 1em;
   text-indent: 10em;
 }
-
 #close::after {
   position: absolute;
   content: "×";
@@ -477,35 +462,31 @@ a {
   display: none;
 }
 
-
 #message {
   display: none;
   position: absolute;
   inset: 65px 0 0;
+  color: green;
 }
 
 @media (width <= 1165px) {
   .footer-wrapper, .wrapper_container {
     padding: 0 20px;
   }
-
   .main-screen-container {
     margin: 0 20px;
   }
-
   .user-icon {
     right: 20px;
   }
-
   .container-planet {
     display: none;
   }
 }
-
 /* style for page 404 */
 .header-404_bkg {
   background-image: none;
-  background-color: rgb(5 5 32);
+  background-color: rgb(5, 5, 32);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -516,7 +497,6 @@ a {
   position: relative;
   overflow-x: hidden;
 }
-
 .header-404_bkg::before {
   content: "";
   display: block;
@@ -528,7 +508,6 @@ a {
   bottom: 0;
   left: 0;
 }
-
 .header-404_bkg::after {
   content: "";
   display: block;
@@ -554,7 +533,7 @@ a {
 .wrapper-link {
   background-color: #1E1E37;
   padding: 22px 0;
-  border-bottom: 1px solid rgb(255 255 255 / 20%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .link {
@@ -562,7 +541,6 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-
 .link > p {
   font-size: 20px;
 }
@@ -571,11 +549,9 @@ a {
   display: flex;
   gap: 30px;
 }
-
 .wrapper-link-way p {
   position: relative;
 }
-
 .wrapper-link-way p + p::before {
   content: "";
   width: 3px;
@@ -606,12 +582,10 @@ a {
   position: relative;
   overflow: hidden;
 }
-
 .container-planet .img--planet {
   width: 100%;
   transform: translate(15px, -15px);
 }
-
 .container-planet::before {
   content: "";
   background-image: url("/photo/planet_shadow.png");
@@ -631,35 +605,31 @@ a {
   padding: 32px 47px 32px 32px;
 }
 
-@media (width <= 480px) and (hover: none) {
+@media (width <= 480px) {
   .block-about, .block-legalese, .block-mobile-app, .block-connect {
     border: 1px solid white;
     padding: 10px;
     margin: auto;
     border-radius: 6px;
   }
-
   .footer-menu > div + div {
     margin-top: 25px;
   }
-
   .footer-other {
     justify-content: center;
   }
-
   .footer-other p {
     margin: 25px 0;
   }
-
   .container-in-header {
     height: 68px;
   }
-
   .container-in-header > a {
     display: none;
   }
-
   .main-screen {
     padding: 0 10px;
   }
 }
+
+/*# sourceMappingURL=css2.css.map */
